@@ -3,7 +3,7 @@
 MCP (Model Context Protocol) server for **HeroUI v2** (https://v2.heroui.com) component documentation,
 source code, style definitions and theme tokens.
 
-Unlike the official [`@heroui/react-mcp`](../heroui-mcp) — which targets HeroUI **v3** and needs a
+Unlike the official `@heroui/react-mcp` — which targets HeroUI **v3** and needs a
 deployed Cloudflare Worker + R2 bucket + PostHog project behind it — this is a **standalone local server**:
 it fetches everything on demand directly from `heroui-inc/heroui@main` (the branch that tracks v2.x) and
 `raw.githubusercontent.com`, caching results in memory for the life of the process. No cloud account,
@@ -30,31 +30,47 @@ to serve v2 docs, so this project mirrors its tool surface but points at the v2 
 
 ## Install & run
 
-```bash
-npm install
-npm run build
-```
+The package is published on npm as [`heroui-v2-mcp`](https://www.npmjs.com/package/heroui-v2-mcp), so no
+clone or build step is required to use it.
 
 ### Use from Claude Code / Claude Desktop / Cursor
 
-Add to your MCP config, pointing at the built entry point:
+Add to your MCP config — `npx` downloads and runs it on demand:
 
 ```json
 {
   "mcpServers": {
     "heroui-v2": {
-      "command": "node",
-      "args": ["/absolute/path/to/ppm-heroui-mcp/dist/server.js"]
+      "command": "npx",
+      "args": ["-y", "heroui-v2-mcp"]
     }
   }
 }
 ```
 
-### Local development
+Or install it globally and point at the binary directly:
 
 ```bash
-npm run dev        # tsx --watch, runs src/server.ts directly (no build step)
-npm run inspect     # launches @modelcontextprotocol/inspector against src/server.ts
+npm install -g heroui-v2-mcp
+```
+
+```json
+{
+  "mcpServers": {
+    "heroui-v2": {
+      "command": "heroui-v2-mcp"
+    }
+  }
+}
+```
+
+### Local development (from source)
+
+```bash
+npm install
+npm run dev         # tsx --watch, runs src/server.ts directly (no build step)
+npm run inspect      # launches @modelcontextprotocol/inspector against src/server.ts
+npm run build        # emits dist/server.js
 ```
 
 ### GitHub rate limits

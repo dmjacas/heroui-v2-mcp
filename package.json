@@ -1,19 +1,33 @@
 {
   "name": "heroui-v2-mcp",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
-  "private": true,
   "description": "MCP server for HeroUI v2 (https://v2.heroui.com) component documentation, source code, styles and theme tokens.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "heroui",
+    "react",
+    "tailwind",
+    "components"
+  ],
+  "homepage": "https://github.com/dmjacas/heroui-v2-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/dmjacas/heroui-v2-mcp/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dmjacas/heroui-v2-mcp"
+    "url": "git+https://github.com/dmjacas/heroui-v2-mcp.git"
   },
+  "license": "MIT",
+  "author": "Danier Marante Jacas",
   "main": "dist/server.js",
   "bin": {
     "heroui-v2-mcp": "dist/server.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "dev": "tsx --watch src/server.ts",
