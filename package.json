@@ -4,6 +4,10 @@
   "type": "module",
   "private": true,
   "description": "MCP server for HeroUI v2 (https://v2.heroui.com) component documentation, source code, styles and theme tokens.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmjacas/heroui-v2-mcp"
+  },
   "main": "dist/server.js",
   "bin": {
     "heroui-v2-mcp": "dist/server.js"

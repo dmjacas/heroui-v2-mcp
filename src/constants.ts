@@ -1,6 +1,9 @@
 export const GITHUB_OWNER = "heroui-inc";
 export const GITHUB_REPO = "heroui";
 
+// Repo of this MCP server itself (not the HeroUI source repo above).
+export const SERVER_REPO_URL = "https://github.com/dmjacas/heroui-v2-mcp";
+
 // The "main" branch of heroui-inc/heroui tracks HeroUI v2.x (package.json version 2.0.0).
 // HeroUI v3 lives on the "v3" branch and is a different, incompatible component model.
 export const GITHUB_BRANCH = "main";
