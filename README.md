@@ -1,5 +1,7 @@
 # heroui-v2-mcp
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/dmjacas-heroui-v2-mcp-1h7p7x)](https://m8ven.ai/mcp/dmjacas-heroui-v2-mcp-1h7p7x?s=readme)
+
 MCP (Model Context Protocol) server for **HeroUI v2** (https://v2.heroui.com) component documentation,
 source code, style definitions and theme tokens.
 
